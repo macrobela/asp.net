@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BLOGModelStoreContainer" CdmEntityContainer="BLOGEntities">
+    <EntitySetMapping Name="Kategori">
+      <EntityTypeMapping TypeName="BLOGModel.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="KategoriAd" ColumnName="KategoriAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rel_Blog_Kategori">
+      <EntityTypeMapping TypeName="BLOGModel.Rel_Blog_Kategori">
+        <MappingFragment StoreEntitySet="Rel_Blog_Kategori">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BLOGModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BLOGModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BLOGModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BLOGModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BLOGModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BLOGModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BLOGModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BLOGModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BLOGModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Kullanicis">
+      <EntityTypeMapping TypeName="BLOGModel.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="KullaniciYetki" ColumnName="KullaniciYetki" />
+          <ScalarProperty Name="KullaniciAktif" ColumnName="KullaniciAktif" />
+          <ScalarProperty Name="KullaniciKayitSilmeTarih" ColumnName="KullaniciKayitSilmeTarih" />
+          <ScalarProperty Name="KullaniciKayitTarih" ColumnName="KullaniciKayitTarih" />
+          <ScalarProperty Name="KullaniciFotoUrl" ColumnName="KullaniciFotoUrl" />
+          <ScalarProperty Name="KullaniciParola" ColumnName="KullaniciParola" />
+          <ScalarProperty Name="KullaniciEposta" ColumnName="KullaniciEposta" />
+          <ScalarProperty Name="KullaniciDogumTarihi" ColumnName="KullaniciDogumTarihi" />
+          <ScalarProperty Name="KullaniciAdSoyad" ColumnName="KullaniciAdSoyad" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="BLOGModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="BlogAktif" ColumnName="BlogAktif" />
+          <ScalarProperty Name="BlogGuncellemeTarihi" ColumnName="BlogGuncellemeTarihi" />
+          <ScalarProperty Name="BlogKayitTarih" ColumnName="BlogKayitTarih" />
+          <ScalarProperty Name="BlogYazariD" ColumnName="BlogYazariD" />
+          <ScalarProperty Name="BlogGorselUrl" ColumnName="BlogGorselUrl" />
+          <ScalarProperty Name="Blogicerik" ColumnName="Blogicerik" />
+          <ScalarProperty Name="BlogBaslik" ColumnName="BlogBaslik" />
+          <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
